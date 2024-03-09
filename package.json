@@ -1,0 +1,34 @@
+{
+  "name": "models-api",
+  "version": "1.0.0",
+  "description": "A model API",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeblitz97/models-api.git"
+  },
+  "author": "Mohtasim Alam Sohom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codeblitz97/models-api/issues"
+  },
+  "homepage": "https://github.com/codeblitz97/models-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "morgan": "^1.10.0",
+    "node_characterai": "https://github.com/codeblitz97/node_characterai"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.11.25",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  }
+}
