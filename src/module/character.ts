@@ -1,4 +1,4 @@
-import CharacterAI from 'node_characterai';
+import CharacterAI from '../lib/node_characterai';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
