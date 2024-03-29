@@ -9,7 +9,7 @@ const character = new CharacterAI();
 export const authorize = async () => {
   try {
     //@ts-ignore
-    character.puppeteerPath = await chromium.executablePath();
+    character.puppeteerPath = await chromium.executablePath;
     await character.authenticateWithToken(
       process.env.CHARACTER_AI_TOKEN as string
     );

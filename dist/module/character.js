@@ -44,7 +44,7 @@ const character = new node_characterai_1.default();
 const authorize = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         //@ts-ignore
-        character.puppeteerPath = yield chrome_aws_lambda_1.default.executablePath();
+        character.puppeteerPath = yield chrome_aws_lambda_1.default.executablePath;
         yield character.authenticateWithToken(process.env.CHARACTER_AI_TOKEN);
     }
     catch (error) {
