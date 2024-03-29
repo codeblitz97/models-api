@@ -41,10 +41,10 @@ const dotenv = __importStar(require("dotenv"));
 const chrome_aws_lambda_1 = __importDefault(require("chrome-aws-lambda"));
 dotenv.config();
 const character = new node_characterai_1.default();
-//@ts-ignore
-character.puppeteerPath = await chrome_aws_lambda_1.default.executablePath();
 const authorize = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
+        //@ts-ignore
+        character.puppeteerPath = yield chrome_aws_lambda_1.default.executablePath();
         yield character.authenticateWithToken(process.env.CHARACTER_AI_TOKEN);
     }
     catch (error) {
