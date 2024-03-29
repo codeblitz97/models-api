@@ -38,16 +38,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.authorize = void 0;
 const node_characterai_1 = __importDefault(require("node_characterai"));
 const dotenv = __importStar(require("dotenv"));
-const puppeteer_1 = __importDefault(require("puppeteer"));
 dotenv.config();
 const character = new node_characterai_1.default();
+character.requester.puppeteerPath =
+    process.env.NODE_ENV === 'production'
+        ? process.env.PUPPETEER_EXECUTABLE_PATH
+        : character.requester.puppeteerPath;
 const authorize = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        // @ts-ignore
-        character.puppeteerPath =
-            process.env.NODE_ENV == 'production'
-                ? process.env.PUPPETEER_EXECUTABLE_PATH
-                : puppeteer_1.default.executablePath();
         yield character.authenticateWithToken(process.env.CHARACTER_AI_TOKEN);
     }
     catch (error) {
