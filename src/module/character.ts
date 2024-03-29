@@ -6,11 +6,10 @@ dotenv.config();
 
 const character = new CharacterAI();
 
-//@ts-ignore
-character.puppeteerPath = await chromium.executablePath();
-
 export const authorize = async () => {
   try {
+    //@ts-ignore
+    character.puppeteerPath = await chromium.executablePath();
     await character.authenticateWithToken(
       process.env.CHARACTER_AI_TOKEN as string
     );
